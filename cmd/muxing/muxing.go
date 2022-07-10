@@ -60,7 +60,7 @@ func Start(host string, port int) {
 	router.HandleFunc("/name/{PARAM}", nameHandler).Methods(http.MethodGet)
 	router.HandleFunc("/bad", badHandler).Methods(http.MethodGet)
 	router.HandleFunc("/data", dataHandler).Methods(http.MethodPost)
-	router.HandleFunc("headers", headersHandler).Methods(http.MethodPost)
+	router.HandleFunc("/headers", headersHandler).Methods(http.MethodPost)
 
 	log.Println(fmt.Printf("Starting API server on %s:%d\n", host, port))
 	if err := http.ListenAndServe(fmt.Sprintf("%s:%d", host, port), router); err != nil {
