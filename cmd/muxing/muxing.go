@@ -50,7 +50,7 @@ func headersHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("a + b", strconv.Itoa(a+b))
+	w.Header().Set("a+b", strconv.Itoa(a+b))
 }
 
 // Start /** Starts the web server listener on given host and port.
